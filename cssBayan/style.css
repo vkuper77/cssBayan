@@ -35,3 +35,8 @@
   input[type="radio"]:hover + .accordion__header + .accordion__content {
     display: block;
   }
+
+  .accordion__content:hover {
+    cursor: pointer;
+    display: block;
+  }
