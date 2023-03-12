@@ -1,47 +1,82 @@
-.accordion {
-    max-width: 500px;
-    margin: 0 auto;
-  }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        overflow-x: hidden;
+        margin-right: calc(-1 * (100vw - 100%));
+      }
+
+    body {
+        background-color: #EDF1D6;
+    }
+    
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 50px 0;
+    }
+
+    .title{
+        font-family: "Lucida Console", "Courier New", monospace;
+        color: #40513B;
+        margin-bottom: 8px;
+    }
+
+    .accordion {
+        padding: 0 50px;
+        max-width: 500px;
+        border: 2px solid #40513B;
+        border-radius: 10px;
+    }
+
+    .border_top{
+        border-top: 2px solid #40513B;
+    }
 
   .accordion__element {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    padding: 10px;
-    background-color: #AA77FF;
-    border-bottom: 1px solid #ddd;
+    justify-content: center;
     cursor: pointer;
+    padding: 10px 0;
   }
 
-  .accordion:hover {
-    color: #ddd;
+  .accordion:hover span {
+    color: #AA5656;
   }
 
   span {
     display: block;
+    color: #40513B;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-family: "Lucida Console", "Courier New", monospace;
   }
 
-  img {
-    width: 0px; 
-    height: 0px;
+.mem {
+    height: 0;
+    width: 300px;
     scale: 0;
-    transition: height 0.7s ease-out;
-    transition: scale 0.7s ease-out;
+    transition: scale 0.9s ease-in-out;
     align-self: center;
   }
 
-  input[type="radio"]:checked + .accordion__element img {
-    height: 100px;
-    width: 100px;
+  input[type="radio"]:checked + .accordion__element > .mem {
+    min-height: 300px;
     scale: 1;
   }
 
-  input[type="radio"]:hover + .accordion__element img {
-    height: 100px;
-    width: 100px;
+  input[type="radio"]:hover + .accordion__element > .mem {
+    min-height: 300px;
     scale: 1;
   }
 
   input[type="radio"]:checked + .accordion__element span {
-    color: #ddd;
+    color: #40513B;
   }
