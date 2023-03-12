@@ -1,42 +1,42 @@
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  html {
+      overflow-x: hidden;
+      margin-right: calc(-1 * (100vw - 100%));
     }
 
-    html {
-        overflow-x: hidden;
-        margin-right: calc(-1 * (100vw - 100%));
-      }
-
-    body {
-        background-color: #EDF1D6;
-    }
+  body {
+      background-color: #EDF1D6;
+  }
     
-    .wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 50px 0;
-    }
+  .wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 50px 0;
+  }
 
-    .title{
-        font-family: "Lucida Console", "Courier New", monospace;
-        color: #40513B;
-        margin-bottom: 8px;
-    }
+  .title{
+      font-family: "Lucida Console", "Courier New", monospace;
+      color: #40513B;
+      margin-bottom: 20px;
+  }
 
-    .accordion {
-        padding: 0 30px;
-        min-width: 600px;
-        border: 2px solid #40513B;
-        border-radius: 10px;
-    }
+  .accordion {
+      padding: 10px 30px;
+      min-width: 600px;
+      border: 2px solid #40513B;
+      border-radius: 10px;
+  }
 
-    .border_top{
-        border-top: 2px solid #40513B;
-    }
+  .border_top{
+      border-top: 2px solid #40513B;
+  }
 
   .accordion__element {
     position: relative;
@@ -45,7 +45,8 @@
     cursor: pointer;
     padding: 10px 0;
     max-height: 100px;
-    transition: max-height 0.15s ease-out;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
   }
 
   .accordion:hover span {
@@ -75,11 +76,12 @@
   }
 
 .mem {
-    height: 0;
+    height: 0px;
     width: 400px;
     scale: 0;
-    transition: scale 0.9s ease-in-out;
     align-self: center;
+    transition: scale 0.4s ease-out;
+    transition: height 0.5s ease-out;
   }
 
   input[type="radio"]:checked + .accordion__element > .arrow {
@@ -91,23 +93,25 @@
   }
 
   input[type="radio"]:checked + .accordion__element > .mem {
-    min-height: 400px;
+    height: 400px;
     margin: 10px 0;
     scale: 1;
+    transition: scale 0.7s ease-in;
   }
 
   input[type="radio"]:hover + .accordion__element > .mem {
-    min-height: 400px;
+    height: 400px;
     margin: 10px 0;
     scale: 1;
+    transition: scale 0.7s ease-in;
   }
 
-  input[type="radio"]:hover + .accordion__element {
+  input[type="radio"]:checked + .accordion__element {
     max-height: 500px;
     transition: max-height 0.5s ease-in;
   }
 
-  input[type="radio"]:checked + .accordion__element {
+  input[type="radio"]:hover + .accordion__element {
     max-height: 500px;
     transition: max-height 0.5s ease-in;
   }
@@ -141,11 +145,11 @@
     }
 
     input[type="radio"]:checked + .accordion__element > .mem {
-      min-height: 250px;
+      height: 250px;
     }
   
     input[type="radio"]:hover + .accordion__element > .mem {
-      min-height: 250px;
+      height: 250px;
     }
   }
 
@@ -173,10 +177,10 @@
     }
 
     input[type="radio"]:checked + .accordion__element > .mem {
-      min-height: 200px;
+      height: 200px;
     }
   
     input[type="radio"]:hover + .accordion__element > .mem {
-      min-height: 200px;
+      height: 200px;
     }
   }
