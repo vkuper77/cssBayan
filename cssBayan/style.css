@@ -1,0 +1,28 @@
+.accordion {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .accordion__header {
+    display: block;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .accordion__header:hover {
+    background-color: #ddd;
+  }
+  
+  .accordion__content {
+    padding: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .accordion__content p {
+    margin: 0;
+    display: inline-block;
+  }
