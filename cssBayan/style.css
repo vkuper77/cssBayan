@@ -3,8 +3,10 @@
     margin: 0 auto;
   }
 
-  .accordion__header {
-    display: block;
+  .accordion__element {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 10px;
     background-color: #AA77FF;
     border-bottom: 1px solid #ddd;
@@ -14,17 +16,32 @@
   .accordion:hover {
     color: #ddd;
   }
-  
+
+  span {
+    display: block;
+  }
+
   img {
-    display: none;
+    width: 0px; 
+    height: 0px;
+    scale: 0;
+    transition: height 0.7s ease-out;
+    transition: scale 0.7s ease-out;
+    align-self: center;
   }
 
-  input[type="radio"]:checked + .accordion__header > img {
-    display: block;
-    height: 200px;
+  input[type="radio"]:checked + .accordion__element img {
+    height: 100px;
+    width: 100px;
+    scale: 1;
   }
 
-  input[type="radio"]:hover + .accordion__header > img {
-    display: block;
-    height: 200px;
+  input[type="radio"]:hover + .accordion__element img {
+    height: 100px;
+    width: 100px;
+    scale: 1;
+  }
+
+  input[type="radio"]:checked + .accordion__element span {
+    color: #ddd;
   }
