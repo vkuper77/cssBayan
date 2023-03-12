@@ -6,24 +6,32 @@
   .accordion__header {
     display: block;
     padding: 10px;
-    background-color: #f5f5f5;
+    background-color: #AA77FF;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
   }
   
-  .accordion__header:hover {
-    background-color: #ddd;
+  .accordion:hover {
+    color: #ddd;
   }
   
   .accordion__content {
     padding: 10px;
-    background-color: #fff;
+    background-color: #C9EEFF;
     display: none;
     overflow: hidden;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #97DEFF;
   }
   
-  .accordion__content p {
+  .accordion__content span {
     margin: 0;
     display: inline-block;
+  }
+
+  input[type="checkbox"]:checked + .accordion__header + .accordion__content {
+    display: block;
+  }
+  
+  input[type="checkbox"]:hover + .accordion__header + .accordion__content {
+    display: block;
   }
