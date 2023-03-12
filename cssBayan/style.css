@@ -18,6 +18,7 @@
   .accordion__content {
     padding: 10px;
     background-color: #fff;
+    display: none;
     overflow: hidden;
     border-bottom: 1px solid #ddd;
   }
