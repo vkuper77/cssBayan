@@ -2,7 +2,7 @@
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   .accordion__header {
     display: block;
     padding: 10px;
@@ -10,11 +10,11 @@
     border-bottom: 1px solid #ddd;
     cursor: pointer;
   }
-  
+
   .accordion:hover {
     color: #ddd;
   }
-  
+
   .accordion__content {
     padding: 10px;
     background-color: #C9EEFF;
@@ -22,16 +22,16 @@
     overflow: hidden;
     border-bottom: 1px solid #97DEFF;
   }
-  
+
   .accordion__content span {
     margin: 0;
     display: inline-block;
   }
 
-  input[type="checkbox"]:checked + .accordion__header + .accordion__content {
+  input[type="radio"]:checked + .accordion__header + .accordion__content {
     display: block;
   }
-  
-  input[type="checkbox"]:hover + .accordion__header + .accordion__content {
+
+  input[type="radio"]:hover + .accordion__header + .accordion__content {
     display: block;
   }
