@@ -104,3 +104,68 @@
   input[type="radio"]:checked + .accordion__element span {
     color: #40513B;
   }
+  
+
+  @media (max-width: 820px) {
+    .title{
+      font-size: 1.5rem;
+    }
+
+    .accordion{
+      min-width: 400px;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+
+    .mem {
+      width: 250px;
+    }
+
+    .arrow{
+      width: 13px;
+      height: 13px;
+      top: 12px;
+    }
+
+    input[type="radio"]:checked + .accordion__element > .mem {
+      min-height: 250px;
+    }
+  
+    input[type="radio"]:hover + .accordion__element > .mem {
+      min-height: 250px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title{
+      font-size: 1rem;
+    }
+
+    .accordion{
+      min-width: 250px;
+    }
+
+    span {
+      font-size: 0.5rem;
+    }
+
+    .mem {
+      width: 200px;
+    }
+
+    .arrow{
+      width: 10px;
+      height: 10px;
+      top: 10px;
+    }
+
+    input[type="radio"]:checked + .accordion__element > .mem {
+      min-height: 200px;
+    }
+  
+    input[type="radio"]:hover + .accordion__element > .mem {
+      min-height: 200px;
+    }
+  }
